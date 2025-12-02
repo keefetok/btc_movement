@@ -1,3 +1,13 @@
+Data Sourcing:
+Data on historical price is/was readily available during the time period of 2024. Aside from this, more convoluted data such as open interest and ETF flows were not as readily available, and had to be sourced (and created/collated) with greater work done.
+The data obtained on price was clean, and ready to be used but ETF was more messy with the need to manage only total_flows. However, difficulty was found with inconsistent usage of date formats from both files used (thus that giant line of date cleanup you see twice).
+Also, there was a need to convert data from 'string' values to 'doubles' for querying use in pyspark sql.
+
+Why pyspark sql over dbs such as bigquery, etc...?: 
+Pyspark sql used for ease of transition downstream and for the spark ML properties that can be found later.
+
+We then test and fit data accordingly to produce results that show us why predicting prices do not (even with help of computers) necessarily mean a 100% hit rate... even 50% is good enough... 
+
 Star Schema/ER:
 
 Fact Tables --Measures--> Fact Daily Price / Fact ETF flows / ML Predictions
