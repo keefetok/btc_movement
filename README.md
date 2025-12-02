@@ -14,3 +14,6 @@ also, fact tables being further broken down allows for optimised querying
 and scalability + flexibility is there with the fact that primary join key is the only concern here
 
 ML is very basic design using random forest + linear regression (to test)
+
+
+Overall, it can be seen that there are a plethora of data that correlate and must overlap to create an accurate prediction, which even then is still a good enough guess. 
